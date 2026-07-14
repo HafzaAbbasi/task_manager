@@ -1,16 +1,80 @@
-# React + Vite
+# 📝Task Manager App
+A React + Vite task management application that lets users add users and assign tasks to them, with search, filtering, and local persistence. The app is styled using Tailwind CSS and includes responsive design for mobile, tablet, and desktop screens.
+#
+## ✨Live Demo
+ 🔗 Add your live link here
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌Tech Stack
+- React 19
+- Vite 4
+- Tailwind CSS 4
+- ESLint
+- LocalStorage for data persistence
 
-Currently, two official plugins are available:
+## ☀ Project Structure
+```
+TASK-MANAGER/
+  ├── public/
+  ├── src/
+  │   ├── App.jsx
+  │   ├── index.css
+  │   ├── main.jsx
+  │   └── components/
+  │       ├── UserForm.jsx
+  │       ├── TaskForm.jsx
+  │       ├── UserTable.jsx
+  │       └── TaskTable.jsx
+  ├── package.json
+  ├── vite.config.js
+  ├── eslint.config.js
+  └── README.md
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👉Features
+- Add new users with name, email, designation, profession, and description
+- Add new tasks and assign them to existing users
+- Set task deadline and priority (High / Medium / Low)
+- Search users by name
+- Search tasks by title, and filter tasks by user or priority
+- Users and tasks are saved in browser local storage
+- Clean, modern UI using Tailwind CSS
 
-## React Compiler
+## 🎭Responsive Web Design
+- Layout scales for mobile, tablet, and desktop screens
+- Forms use fluid width with max-width constraints and stack fields on small screens
+- Tables switch to stacked cards on mobile to avoid horizontal scrolling, and display as full tables on tablet/desktop
+- Touch-friendly buttons and inputs
+- Responsive spacing and typography for smaller devices
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚩Getting Started
+### Prerequisites
+- Node.js installed (recommended 18+)
+- npm or yarn
 
-## Expanding the ESLint configuration
+### Install Dependencies
+```bash
+cd path/to/TASK-MANAGER
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Run Development Server
+```bash
+npm run dev
+```
+
+### Build for Production
+```bash
+npm run build
+```
+
+### Preview Production Build
+```bash
+npm run preview
+```
+
+## Notes
+- Users and tasks persist across page refreshes using `localStorage`.
+- Form state (`UserForm`, `TaskForm`) and table search/filter state (`UserTable`, `TaskTable`) are kept local to each component for optimized rendering, so typing in a form or search box doesn't re-render unrelated parts of the app.
+
+## 👩Author
+Hafza Abbasi
